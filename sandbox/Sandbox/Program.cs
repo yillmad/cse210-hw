@@ -1,49 +1,37 @@
 using System;
+using System.Globalization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is your grade percentage? ");
-        string grade = Console.ReadLine();
+        List<int>numbers=new List<int>();
+        int number;
+        int sum = 0;
+        int times = -1;
+        Console.WriteLine("Enter a list of numbers, type 0 when finished");
+        
+        do{
+            Console.Write("Enter a number: ");
+            number = int.Parse(Console.ReadLine());
+            numbers.Add(number);
+            times++;
+        }while(number!=0);
 
-        if (int.TryParse(grade, out int intGrade))
+        foreach(int num in numbers)
         {
-            string letter;
+            sum = sum + num;
+            int largest;
+            if (lastNumber>num){
 
-            if (intGrade >= 90)
-            {
-                letter = "A";
             }
-            else if (intGrade >= 80)
-            {
-                letter = "B";
-            }
-            else if (intGrade >= 70)
-            {
-                letter = "C";
-            }
-            else if (intGrade >= 60)
-            {
-                letter = "D";
-            }
-            else
-            {
-                letter = "F";
-            }
+            int lastNumber = num;
+        }
 
-            if (letter == "A" || letter == "B" || letter == "C")
-            {
-                Console.WriteLine($"Your grade is {letter} and you passed");
-            }
-            else if (letter == "D" || letter == "F")
-            {
-                Console.WriteLine($"Your grade is {letter} and you didn't pass");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid input. Please enter a valid grade percentage.");
-        }
+        int average = sum/times;
+        Console.WriteLine($"The sum is: {sum}");
+        Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The largest number is: ");
+
     }
 }
