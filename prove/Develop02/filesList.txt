@@ -1,0 +1,4 @@
+mind.txt
+goal.txt
+newexample.txt
+extra.txt
