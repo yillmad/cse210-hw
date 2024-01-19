@@ -57,6 +57,7 @@ class Program
                 Journal.DisplayAll();
             }
             else if(optionChosen==3){
+                // Displays the list of previouse files
                 Console.WriteLine("Here is a list of exiting files");
                 Files.DisplayFiles(filePath._filePath);
                 Console.WriteLine("What is the File Name?");
@@ -67,6 +68,7 @@ class Program
                 Console.WriteLine("What is the File Name?");
                 string nameFile = Console.ReadLine();
                 Journal.SaveToFile(nameFile);
+                // Save the name of the file into the filesList document
                 Files.SaveFileName(filePath._filePath,nameFile);
             }
             else if(optionChosen > 5){
