@@ -20,8 +20,25 @@ class Scripture
 
     Random random = new Random();
     HashSet<int> usedIndices = new HashSet<int>();
+    // public void HideRandomWords(int numberToHide)
+    // {
+    //     for (int i = 0; i < numberToHide; i++)
+    //     {
+    //         int index;
+
+    //         do
+    //         {
+    //             index = random.Next(_words.Count);
+    //         } while (usedIndices.Contains(index));
+
+    //         _words[index].Hide();
+    //         usedIndices.Add(index);
+    //     }
+    // }
     public void HideRandomWords(int numberToHide)
     {
+        usedIndices.Clear(); // Clear the set before hiding new words
+
         for (int i = 0; i < numberToHide; i++)
         {
             int index;
@@ -35,6 +52,7 @@ class Scripture
             usedIndices.Add(index);
         }
     }
+
 
     public string GetDisplayText(){
         string displayText = $"{_reference.GetDisplayText()}\n";
