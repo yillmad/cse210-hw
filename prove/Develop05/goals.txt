@@ -1,0 +1,5 @@
+4800
+5
+EternalGoal,Praying,Pray everyday,500
+SimpleGoal,wake up,Wake up tomorrow at 5,1200,True
+ChecklistGoal,Program,Practice programming everyday this week,300,5000,7,2
